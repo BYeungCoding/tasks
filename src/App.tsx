@@ -1,12 +1,18 @@
 import React from "react";
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import eleceed from "./Images/Eleceed.png";
 
 function App(): JSX.Element {
     return (
         <div className="App">
             <h1> This is my Header</h1>
-            <img src="./Images/Eleceed" alt="A picture of my favorite manhwa" />
+            <img
+                src={eleceed}
+                height="200px"
+                width="200px"
+                alt="A picture of my favorite manhwa"
+            />
             <ol>
                 <li> Eleceed </li>
                 <li> Talent-Swallowing Magician</li>
