@@ -26,10 +26,10 @@ function App(): JSX.Element {
             <Container>
                 <Row>
                     <Col>
-                        <div className="rectangle"></div>Action
+                        <div className="rectangle">Action</div>
                     </Col>
                     <Col>
-                        <div className="rectangle"></div>Romance
+                        <div className="rectangle">Romance</div>
                     </Col>
                 </Row>
             </Container>
