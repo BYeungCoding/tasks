@@ -88,7 +88,9 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const total = addends.reduce((sum, curr) => sum + curr, 0);
+    const string = addends.join("+");
+    return `${total}=${string || "0"}`;
 }
 
 /**
@@ -101,5 +103,15 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const index = values.findIndex((negative) => negative < 0);
+    if (index === -1) {
+        const total = values.reduce((sum, curr) => sum + curr, 0);
+        return [...values, total];
+    } else {
+        const val: number[] = values.slice(0, index);
+        const total = val.reduce((sum, curr) => sum + curr, 0);
+        const clone: number[] = [...values];
+        clone.splice(index + 1, 0, total);
+        return clone;
+    }
 }
