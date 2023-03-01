@@ -5,7 +5,13 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    if (numbers.length === 0) {
+        return [];
+    } else if (numbers.length == 1) {
+        return [numbers[0], numbers[0]];
+    } else {
+        return [numbers[0], numbers[numbers.length - 1]];
+    }
 }
 
 /**
@@ -13,7 +19,7 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    return numbers.map((num) => num * 3);
 }
 
 /**
@@ -21,9 +27,11 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    return numbers.map((num) => {
+        const parsed = parseInt(num, 10);
+        return isNaN(parsed) ? 0 : parsed;
+    });
 }
-
 /**
  * Consume an array of strings and return them as numbers. Note that
  * the strings MAY have "$" symbols at the beginning, in which case
