@@ -22,7 +22,7 @@ export function CycleHoliday(): JSX.Element {
         "Chinese New Year": "Halloween",
         Halloween: "Thanksgiving",
         Thanksgiving: "Christmas",
-        Chirstmas: "New Year"
+        Christmas: "New Year"
     };
     const emojis: Record<Holiday, string> = {
         "New Year": "🎉",
