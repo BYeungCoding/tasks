@@ -1,44 +1,30 @@
 import React from "react";
 import "./App.css";
-import { Button, Col, Container, Row } from "react-bootstrap";
-import eleceed from "./Images/Eleceed.png";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
         <div className="App">
-            <h1> This is my Header</h1>
-            <img
-                src={eleceed}
-                height="200px"
-                width="200px"
-                alt="A picture of my favorite manhwa"
-            />
-            <ol>
-                <li> Eleceed </li>
-                <li> Talent-Swallowing Magician</li>
-                <li> I Obtained a Mythic Item</li>
-            </ol>
-            <Button onClick={() => console.log("Hello World!")}>
-                Log Hello World
-            </Button>
             <header className="App-header">
-                Brandon Yeung UD CISC275 with React Hooks and TypeScript, Hello
-                World
+                UD CISC275 with React Hooks and TypeScript
             </header>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
-            <Container>
-                <Row>
-                    <Col>
-                        <div className="rectangle">Action</div>
-                    </Col>
-                    <Col>
-                        <div className="rectangle">Romance</div>
-                    </Col>
-                </Row>
-            </Container>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
